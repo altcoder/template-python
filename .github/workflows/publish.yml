@@ -1,4 +1,4 @@
-name: Python Publish Workflow
+name: publish
 on:
   workflow_call:
 
