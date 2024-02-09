@@ -1,7 +1,7 @@
-name: Template Sync
+name: sched-template-sync
 
 on:
-    # cronjob trigger
+  # cronjob trigger
   schedule:
   - cron:  "0 0 1 * *"
   # manual trigger
@@ -18,14 +18,14 @@ jobs:
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4
         # https://github.com/actions/checkout#usage
         # uncomment if you use submodules within the source repository
         # with:
         #   submodules: true
 
       - name: actions-template-sync
-        uses: AndreasAugustin/actions-template-sync@v1.4.0
+        uses: AndreasAugustin/actions-template-sync@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_repo_path: altcoder/template-python

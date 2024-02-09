@@ -1,4 +1,4 @@
-name: "Semantic PR Check"
+name: check-pr
 
 on:
   pull_request_target:
